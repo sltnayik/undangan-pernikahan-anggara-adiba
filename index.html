@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Undangan Pernikahan Anggara & Adiba</title>
+  <meta name="description" content="Undangan pernikahan Anggara & Adiba. Lihat detail acara, peta lokasi, dan beri doa restu online.">
+  <meta property="og:title" content="Undangan Pernikahan Anggara & Adiba" />
+  <meta property="og:description" content="Undangan digital penuh cinta: temukan acara, hitung mundur, serta petunjuk lokasi pernikahan kami." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/undangan-share.jpg" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="locked-scroll">
+  <header class="hero">
+    <div class="hero-orb orb-left"></div>
+    <div class="hero-orb orb-right"></div>
+    <div class="floating-element heart1">&#10024;</div>
+    <div class="floating-element heart2">&#10087;</div>
+    <div class="floating-flower flower1">&#10048;</div>
+    <div class="floating-flower flower2">&#10047;</div>
+    <div class="floating-flower flower3">&#10045;</div>
+    <div class="floating-flower flower4">&#10048;</div>
+
+    <div class="hero-shell reveal active">
+      <span class="hero-bloom bloom-top-left" aria-hidden="true"></span>
+      <span class="hero-bloom bloom-top-right" aria-hidden="true"></span>
+      <span class="hero-bloom bloom-bottom-left" aria-hidden="true"></span>
+      <span class="hero-bloom bloom-bottom-right" aria-hidden="true"></span>
+      <p class="hero-kicker">Undangan Pernikahan</p>
+      <div class="hero-image" aria-label="Foto Mempelai">
+        <img id="img1" src="assets/img1.png" alt="Foto Angga dan Diba" />
+      </div>
+
+      <div class="hero-content">
+        <p class="subtitle">The Wedding Of</p>
+        <h1 class="names">
+          <span class="name-part">Anggara</span>
+          <span class="name-separator">&amp;</span>
+          <span class="name-part">Adiba</span>
+        </h1>
+        <p class="hero-tagline">Sebuah undangan hangat untuk menyaksikan awal perjalanan cinta kami dalam ikatan suci pernikahan.</p>
+
+        <div class="hero-action-row">
+          <p class="date">Kepada Yth. Bapak/Ibu/Saudara/i</p>
+          <div class="hero-buttons">
+            <button id="btn-open" class="btn-elegant" type="button" aria-label="Buka Undangan">Buka Undangan</button>
+            <button id="audio-toggle" class="btn-elegant btn-small" type="button" aria-pressed="false" style="display:none" aria-label="Kontrol Musik">Musik</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="invitation-details" class="hidden-section" aria-live="polite">
+    <audio id="bg-music" src="assets/Christina Perri - A Thousand Years [Official Music Video].mp3" loop preload="auto"></audio>
+
+    <section id="couple" class="section-panel couple" role="region" aria-label="Sang Mempelai">
+      <div class="container reveal">
+        <p class="section-eyebrow">Bismillahirrahmanirrahim</p>
+        <h2 class="section-title">Sang Mempelai</h2>
+        <p class="intro-text">Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk hadir pada acara pernikahan kami.</p>
+
+        <div class="couple-wrapper">
+          <article class="person card-soft">
+            <div class="photo-placeholder" role="img" aria-label="Foto Anggara">
+              <img src="assets/cwok.png" alt="Angga" />
+            </div>
+            <h3>Anggara</h3>
+            <p>Putra dari Bapak Mustofa Kamal &amp; Ibu Siti Soleha</p>
+          </article>
+
+          <div class="and" aria-hidden="true">&amp;</div>
+
+          <article class="person card-soft">
+            <div class="photo-placeholder" role="img" aria-label="Foto Adiba">
+              <img src="assets/cwek.png" alt="Adiba" />
+            </div>
+            <h3>Adiba</h3>
+            <p>Putri dari Alm. Bapak Sutikno &amp; Ibu Misratih</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="event" class="section-panel event" role="region" aria-label="Waktu dan Tempat">
+      <div class="container reveal">
+        <p class="section-eyebrow">Save The Date</p>
+        <h2 class="section-title">Waktu & Tempat</h2>
+
+        <div class="event-grid">
+          <article class="card event-card">
+            <span class="card-badge">Akad Nikah</span>
+            <p><strong class="display-date-event">Memuat Tanggal...</strong></p>
+            <p>10.00 WIB - Selesai</p>
+            <p>Kediaman Mempelai Wanita<br />Jatisari - Sukosari</p>
+          </article>
+
+          <article class="card event-card">
+            <span class="card-badge">Resepsi</span>
+            <p><strong class="display-date-event">Memuat Tanggal...</strong></p>
+            <p>13.00 WIB - Selesai</p>
+            <p>Kediaman Mempelai Pria<br />Sruni - Karang Kokap</p>
+          </article>
+        </div>
+
+        <div class="countdown-container card-soft">
+          <h3>Menuju Hari Bahagia</h3>
+          <div class="countdown" id="countdown">
+            <div class="time-box"><span id="days">00</span><p>Hari</p></div>
+            <div class="time-box"><span id="hours">00</span><p>Jam</p></div>
+            <div class="time-box"><span id="minutes">00</span><p>Menit</p></div>
+            <div class="time-box"><span id="seconds">00</span><p>Detik</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="map" class="section-panel venue-map reveal" role="region" aria-label="Lokasi Acara">
+      <div class="container">
+        <p class="section-eyebrow">Lokasi Acara</p>
+        <h2 class="section-title">Tempat Bahagia Kami</h2>
+        <p class="intro-text">Kunjungi lokasi acara untuk memudahkan perjalanan Anda menuju hari istimewa kami.</p>
+        <div class="map-wrapper">
+          <span class="map-decoration">&#10047;</span>
+          <span class="map-decoration alt">&#10024;</span>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3947.989605631888!2d113.63630477358997!3d-8.303830683541285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd69bcd5a508257%3A0x9f31395ec08d4f99!2sJamur%20Janggel!5e0!3m2!1sen!2sid!4v1774708708424!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-panel wedding-gift reveal">
+      <div class="container">
+        <p class="section-eyebrow">Tanda Kasih</p>
+        <h2 class="section-title">Wedding Gift</h2>
+        <p class="intro-text">Doa restu Anda adalah hadiah terindah. Jika berkenan memberikan tanda kasih, kami sediakan informasi berikut.</p>
+        <div class="gift-grid">
+          <article class="card gift-card">
+            <img src="assets/BCA1.png" alt="BCA Logo" class="bca-logo" />
+            <p><strong>Nama</strong>: SOFYAN ANGGARA PUTRA</p>
+            <div class="account-row">
+              <span class="account-number" data-account="3321066371">3321066371</span>
+              <button class="btn-copy" data-account="3321066371" type="button">Salin</button>
+            </div>
+          </article>
+
+          <article class="card gift-card">
+            <img src="assets/BCA1.png" alt="BCA Logo" class="bca-logo" />
+            <p><strong>Nama</strong>: FARHANA FARA DIBA</p>
+            <div class="account-row">
+              <span class="account-number" data-account="3320612178">3320612178</span>
+              <button class="btn-copy" data-account="3320612178" type="button">Salin</button>
+            </div>
+          </article>
+
+          <article class="card gift-card">
+            <h3>Kado</h3>
+            <p><strong>Nama Penerima</strong>: Angga &amp; Adiba</p>
+            <p><strong>Alamat</strong>: RT 001 / RW 004, Dusun Karang Kokap, Desa Sruni, Kec. Jenggawah, Kab. Jember - Jawa Timur</p>
+            <button class="btn-copy" data-account="RT 001 / RW 004, Dusun Karang Kokap, Desa Sruni, Kec. Jenggawah, Kab. Jember - Jawa Timur" type="button">Salin</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-panel rsvp reveal">
+      <div class="container">
+        <p class="section-eyebrow">Ucapan & Doa</p>
+        <h2 class="section-title">Kirim Restu Terbaik</h2>
+        <p class="intro-text">Klik tombol di bawah untuk menuliskan doa singkatmu.</p>
+        <div class="rsvp-actions">
+          <a href="https://wa.me/6287726240881?text=Assalamualaikum%20Angga%2FAdiba%2C%20saya%20mengucapkan%20selamat%20dan%20doa%20terbaik" class="btn-wa" target="_blank" rel="noopener noreferrer">Kirim Ucapan</a>
+        </div>
+        <div id="wish-list" class="wish-list"></div>
+      </div>
+    </section>
+
+    <footer class="footer section-panel">
+      <h2>Terima Kasih</h2>
+      <p>Merupakan suatu kebahagiaan dan kehormatan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu kepada kami.</p>
+      <h3>Kami yang Berbahagia</h3>
+      <p class="footer-names">Anggara &amp; Adiba</p>
+    </footer>
+  </main>
+
+  <div class="floating-sparkle" style="top: 22%; left: 18%; animation-delay: 0s;"></div>
+  <div class="floating-sparkle" style="top: 30%; left: 80%; animation-delay: 0.4s;"></div>
+  <div class="floating-sparkle" style="top: 45%; left: 14%; animation-delay: 0.8s;"></div>
+  <div class="floating-sparkle" style="top: 58%; left: 76%; animation-delay: 1.2s;"></div>
+  <div class="floating-sparkle" style="top: 70%; left: 35%; animation-delay: 1.6s;"></div>
+  <div class="floating-sparkle" style="top: 82%; left: 54%; animation-delay: 2s;"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
