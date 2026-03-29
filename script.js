@@ -11,10 +11,22 @@ const btnWish = document.getElementById('btn-wish');
 const wishList = document.getElementById('wish-list');
 const countdownEl = document.getElementById('countdown');
 const heroImage = document.querySelector('.hero-image');
+const sectionPanels = Array.from(document.querySelectorAll('.section-panel'));
+
+function setRevealDelay(element) {
+  if (!(element instanceof HTMLElement)) return;
+
+  const parentSection = element.closest('.section-panel');
+  const sectionIndex = parentSection ? sectionPanels.indexOf(parentSection) : -1;
+  const baseDelay = sectionIndex >= 0 ? Math.min(sectionIndex * 0.08, 0.4) : 0;
+
+  element.style.setProperty('--reveal-delay', `${0.12 + baseDelay}s`);
+}
 
 function activateReveal(entries, observer) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
+      setRevealDelay(entry.target);
       entry.target.classList.add('active');
       observer.unobserve(entry.target);
     }
@@ -29,7 +41,10 @@ if ('IntersectionObserver' in window) {
 
   revealElements.forEach((element) => observer.observe(element));
 } else {
-  revealElements.forEach((element) => element.classList.add('active'));
+  revealElements.forEach((element) => {
+    setRevealDelay(element);
+    element.classList.add('active');
+  });
 }
 
 const dateObj = new Date(TANGGAL_PERNIKAHAN);
