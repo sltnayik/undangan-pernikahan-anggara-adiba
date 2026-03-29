@@ -445,6 +445,13 @@ h1, h2, h3, .names, .and, .footer-names {
   margin: 14px 0 10px;
 }
 
+@media (max-width: 640px) {
+  .person h3 {
+    font-size: 1.8rem;
+    margin: 12px 0 8px;
+  }
+}
+
 .person p {
   color: var(--text-soft);
   line-height: 1.8;
